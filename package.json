@@ -1,0 +1,26 @@
+{
+  "name": "exp1801",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "watch": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "jssha": "^1.5.0",
+    "mongodb": "^2.2.33",
+    "morgan": "~1.9.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "serve-favicon": "~2.4.5",
+    "url": "^0.11.0",
+    "xml2js": "^0.4.19"
+  }
+}
