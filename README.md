@@ -154,7 +154,7 @@ let xml = '' //存储将要回复给公众号的文字
 ```
 其中ToUserName是接受者的openid，FromUserName是发送者的openid，CreateTime就是一个整型的时间戳。MsgType就是消息类型，一般有文本（text），图片（image），语音（voice），视频（video），小视频（shortvideo），地理位置（location）以及链接消息（link）。
 
-消息接口收到消息时，与回复消息时，ToUserName和FromUserName的位置互换。
+3.消息模板，消息接口收到消息时，与回复消息时，ToUserName和FromUserName的位置互换。
     
 ```javascript
 //回复图文消息
@@ -210,3 +210,21 @@ exports.getVoiceXml = function(json, backTime) {
     return backXML;
 };
 ```
+
+4.客服回复消息
+```javascript
+request({
+    method: 'POST',
+    uri: `https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=${accessToken}`,
+    json: true,
+    body:{
+      "touser": json.xml.FromUserName,
+      "msgtype": "text",
+      "text": {
+        "content": "Hello World"
+      }
+    }
+})
+```
+github地址奉上：https://github.com/KDODIUNCNWERU/node-weixin
+请帮我start一下
